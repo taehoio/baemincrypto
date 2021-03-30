@@ -13,6 +13,10 @@ jobs:
         with:
           fetch-depth: 5
 
+      - name: Setup
+        run: |
+          git config --global url."https://${{ secrets.GH_ACCESS_TOKEN }}@github.com/".insteadOf "https://github.com/"
+
       - name: Setup JDK
         uses: actions/setup-java@v1
         with:
