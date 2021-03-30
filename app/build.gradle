@@ -89,10 +89,6 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
 }
 
-application {
-    mainClass = 'com.github.taehoio.baemincrypto.grpc.Main'
-}
-
 tasks.withType(JavaCompile) {
     sourceCompatibility = '11'
     targetCompatibility = '11'
@@ -103,4 +99,19 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Test) {
     useJUnitPlatform()
+}
+
+mainClassName = "com.github.taehoio.baemincrypto.grpc.Main"
+
+application {
+    mainClass = "$mainClassName"
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "$mainClassName"
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }
