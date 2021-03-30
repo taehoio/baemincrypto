@@ -8,15 +8,15 @@ jobs:
     name: Test
     runs-on: ubuntu-20.04
     steps:
+      - name: Setup
+        run: |
+          git config --global url."https://${{ secrets.GH_ACCESS_TOKEN }}@github.com/".insteadOf "https://github.com/"
+
       - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 5
           submodules: true
-
-      - name: Setup
-        run: |
-          git config --global url."https://${{ secrets.GH_ACCESS_TOKEN }}@github.com/".insteadOf "https://github.com/"
 
       - name: Setup JDK
         uses: actions/setup-java@v1
