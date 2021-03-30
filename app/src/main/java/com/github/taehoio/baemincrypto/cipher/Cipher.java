@@ -1,4 +1,4 @@
-package com.github.taehoio.baemincrypto;
+package com.github.taehoio.baemincrypto.cipher;
 
 import java.util.Base64;
 import javax.crypto.spec.IvParameterSpec;

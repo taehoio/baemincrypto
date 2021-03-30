@@ -1,8 +1,8 @@
 package com.github.taehoio.baemincrypto;
 
+import com.github.taehoio.baemincrypto.cipher.Cipher;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.InstanceOfAssertFactories.STREAM;
 
 public class CipherTest {
     @Test
