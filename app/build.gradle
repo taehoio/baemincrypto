@@ -7,7 +7,7 @@ buildscript {
 plugins {
     id 'java'
     id 'application'
-    id "io.spring.dependency-management" version "1.0.9.RELEASE"
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 }
 
 apply plugin: 'eclipse'
@@ -39,10 +39,10 @@ protobuf {
     // Configure the protoc executable.
     protoc {
         // Download from the repository.
-        if (osdetector.os == "osx") {
-            artifact = "com.google.protobuf:protoc:3.14.0:osx-x86_64"
+        if (osdetector.os == 'osx') {
+            artifact = 'com.google.protobuf:protoc:3.14.0:osx-x86_64'
         } else {
-            artifact = "com.google.protobuf:protoc:3.14.0"
+            artifact = 'com.google.protobuf:protoc:3.14.0'
         }
     }
 
@@ -51,10 +51,10 @@ protobuf {
         // Locate a plugin with name 'grpc'.
         grpc {
             // Download from the repository.
-            if (osdetector.os == "osx") {
-                artifact = "io.grpc:protoc-gen-grpc-java:1.35.1:osx-x86_64"
+            if (osdetector.os == 'osx') {
+                artifact = 'io.grpc:protoc-gen-grpc-java:1.35.1:osx-x86_64'
             } else {
-                artifact = "io.grpc:protoc-gen-grpc-java:1.35.1"
+                artifact = 'io.grpc:protoc-gen-grpc-java:1.35.1'
             }
         }
     }
@@ -101,15 +101,15 @@ tasks.withType(Test) {
     useJUnitPlatform()
 }
 
-mainClassName = "com.github.taehoio.baemincrypto.grpc.Main"
+def mainClassName = 'com.github.taehoio.baemincrypto.grpc.Main'
 
 application {
-    mainClass = "$mainClassName"
+    mainClass.set(mainClassName)
 }
 
 jar {
     manifest {
-        attributes "Main-Class": "$mainClassName"
+        attributes 'Main-Class': 'mainClassName'
     }
     from {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
