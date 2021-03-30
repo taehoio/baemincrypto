@@ -1,0 +1,98 @@
+buildscript {
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.12'
+    }
+}
+
+plugins {
+    id 'application'
+    id "io.spring.dependency-management" version "1.0.9.RELEASE"
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'com.google.protobuf'
+
+repositories {
+    mavenCentral()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'io.micrometer:micrometer-bom:1.5.3'
+        mavenBom 'io.netty:netty-bom:4.1.51.Final'
+        mavenBom 'com.linecorp.armeria:armeria-bom:1.5.0'
+        mavenBom 'org.junit:junit-bom:5.6.2'
+    }
+}
+
+protobuf {
+    // Configure the protoc executable.
+    protoc {
+        // Download from the repository.
+        if (osdetector.os == "osx") {
+            artifact = "com.google.protobuf:protoc:3.14.0:osx-x86_64"
+        } else {
+            artifact = "com.google.protobuf:protoc:3.14.0"
+        }
+    }
+
+    // Locate the codegen plugins.
+    plugins {
+        // Locate a plugin with name 'grpc'.
+        grpc {
+            // Download from the repository.
+            if (osdetector.os == "osx") {
+                artifact = "io.grpc:protoc-gen-grpc-java:1.35.1:osx-x86_64"
+            } else {
+                artifact = "io.grpc:protoc-gen-grpc-java:1.35.1"
+            }
+        }
+    }
+    generateProtoTasks {
+        ofSourceSet('main')*.plugins {
+            grpc {}
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    testImplementation 'junit:junit:4.13'
+    testImplementation 'org.assertj:assertj-core:3.16.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params'
+    testRuntimeOnly 'org.junit.platform:junit-platform-commons'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine'
+
+    implementation 'com.linecorp.armeria:armeria'
+    implementation 'com.linecorp.armeria:armeria-grpc'
+    implementation 'io.projectreactor:reactor-core:3.3.8.RELEASE'
+    compileOnly 'javax.annotation:javax.annotation-api'
+    runtimeOnly 'org.slf4j:slf4j-simple:1.7.30'
+
+    testImplementation 'javax.annotation:javax.annotation-api'
+    testImplementation 'net.javacrumbs.json-unit:json-unit-fluent:2.18.1'
+    testImplementation 'org.assertj:assertj-core:3.16.1'
+    testImplementation 'org.awaitility:awaitility:4.0.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+}
+
+application {
+    mainClass = 'com.github.taehoio.baemincrypto.App'
+}
+
+tasks.withType(JavaCompile) {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+    options.encoding = 'UTF-8'
+    options.debug = true
+    options.compilerArgs += '-parameters'
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+}
