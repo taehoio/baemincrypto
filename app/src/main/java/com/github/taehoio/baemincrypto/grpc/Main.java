@@ -1,6 +1,5 @@
 package com.github.taehoio.baemincrypto.grpc;
 
-import com.github.taehoio.idl.services.baemincrypto.v1.HealthCheckRequest;
 import com.linecorp.armeria.common.grpc.GrpcSerializationFormats;
 import com.linecorp.armeria.server.HttpServiceWithRoutes;
 import com.linecorp.armeria.server.grpc.GrpcService;
@@ -28,7 +27,6 @@ public final class Main {
     }
 
     static Server newServer(int httpPort, int httpsPort) throws Exception {
-        final HealthCheckRequest healthCheckRequest = HealthCheckRequest.newBuilder().build();
         final HttpServiceWithRoutes grpcService =
                 GrpcService.builder()
                            .addService(new BaemincryptoServiceImpl())
@@ -36,6 +34,7 @@ public final class Main {
                            .supportedSerializationFormats(GrpcSerializationFormats.values())
                            .enableUnframedRequests(true)
                            .build();
+
         return Server.builder()
                      .http(httpPort)
                      .https(httpsPort)
@@ -44,4 +43,6 @@ public final class Main {
                      .service("prefix:/prefix", grpcService)
                      .build();
     }
+
+    private Main() {}
 }

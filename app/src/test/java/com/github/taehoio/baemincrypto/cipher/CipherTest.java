@@ -1,6 +1,5 @@
-package com.github.taehoio.baemincrypto;
+package com.github.taehoio.baemincrypto.cipher;
 
-import com.github.taehoio.baemincrypto.cipher.Cipher;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
