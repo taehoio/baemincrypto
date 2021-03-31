@@ -11,9 +11,11 @@ import com.linecorp.armeria.server.Server;
 
 public final class Main {
 
+    private Main() {}
+
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         final Server server = newServer(8080, 8443);
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
@@ -26,7 +28,7 @@ public final class Main {
         logger.info("Server has been started. Serving DocService at http://127.0.0.1:{}/docs", server.activeLocalPort());
     }
 
-    static Server newServer(int httpPort, int httpsPort) throws Exception {
+    static Server newServer(int httpPort, int httpsPort) {
         final HttpServiceWithRoutes grpcService =
                 GrpcService.builder()
                            .addService(new BaemincryptoServiceImpl())
@@ -43,6 +45,4 @@ public final class Main {
                      .service("prefix:/prefix", grpcService)
                      .build();
     }
-
-    private Main() {}
 }

@@ -13,7 +13,7 @@ import com.github.taehoio.idl.services.baemincrypto.v1.HealthCheckRequest;
 import com.github.taehoio.idl.services.baemincrypto.v1.EncryptUserBaedalHeaderValueRequest;
 import com.github.taehoio.idl.services.baemincrypto.v1.DecryptUserBaedalHeaderValueRequest;
 
-public class BaemincryptoServiceTest {
+class BaemincryptoServiceTest {
 
     private static Server server;
 
