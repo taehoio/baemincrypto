@@ -4,7 +4,7 @@ on:
   - push
 
 jobs:
-  unit-test:
+  unit:
     name: Test
     runs-on: ubuntu-20.04
     steps:
@@ -39,8 +39,8 @@ jobs:
         with:
           java-version: 11
 
-      - name: Test with Gradle
-        run: ./gradlew sonarlintMain sonarlintTest --scan
+      - name: Lint with Gradle
+        run: ./gradlew sonarlintMain sonarlintTest
 
   build:
     name: Build and Push
