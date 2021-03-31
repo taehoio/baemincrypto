@@ -8,6 +8,7 @@ plugins {
     id 'java'
     id 'application'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'name.remal.sonarlint' version '1.3.0'
 }
 
 apply plugin: 'eclipse'
@@ -113,5 +114,15 @@ jar {
     }
     from {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+sonarlint {
+    ignoreFailures = false
+    excludes {
+        message 'java:S5542'
+        message 'java:S3329'
+    }
+    includes {
     }
 }
