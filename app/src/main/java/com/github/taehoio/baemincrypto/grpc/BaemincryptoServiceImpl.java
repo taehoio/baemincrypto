@@ -1,33 +1,50 @@
 package com.github.taehoio.baemincrypto.grpc;
 
-import io.grpc.stub.StreamObserver;
-
+import com.github.taehoio.baemincrypto.cipher.Cipher;
 import com.github.taehoio.idl.services.baemincrypto.v1.*;
+import io.grpc.Status;
+import io.grpc.stub.StreamObserver;
 
 public class BaemincryptoServiceImpl extends BaemincryptoServiceGrpc.BaemincryptoServiceImplBase {
 
+    private static final String AES_KEY = "sbfighting";
+
     @Override
-    public void healthCheck(HealthCheckRequest request, StreamObserver<HealthCheckResponse> responseObserver) {
-        HealthCheckResponse healthCheckResponse = HealthCheckResponse.newBuilder().build();
-        responseObserver.onNext(healthCheckResponse);
+    public void healthCheck(
+            HealthCheckRequest request, StreamObserver<HealthCheckResponse> responseObserver) {
+        HealthCheckResponse response = HealthCheckResponse.newBuilder().build();
+        responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
 
     @Override
-    public void encryptUserBaedalHeaderValue(EncryptUserBaedalHeaderValueRequest request, StreamObserver<EncryptUserBaedalHeaderValueResponse> responseObserver) {
-        EncryptUserBaedalHeaderValueResponse encryptUserBaedalHeaderValueResponse = EncryptUserBaedalHeaderValueResponse.newBuilder()
-                .setEncryptedText(request.getInputText())
-                .build();
-        responseObserver.onNext(encryptUserBaedalHeaderValueResponse);
-        responseObserver.onCompleted();
+    public void encryptUserBaedalHeaderValue(
+            EncryptUserBaedalHeaderValueRequest request,
+            StreamObserver<EncryptUserBaedalHeaderValueResponse> responseObserver) {
+        try {
+            String encryptedText = Cipher.encrypt(request.getInputText(), AES_KEY);
+            EncryptUserBaedalHeaderValueResponse response =
+                    EncryptUserBaedalHeaderValueResponse.newBuilder().setEncryptedText(encryptedText).build();
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();
+        } catch (Exception e) {
+            responseObserver.onError(
+                    Status.INTERNAL.withCause(e).withDescription(e.getMessage()).asException());
+        }
     }
 
     @Override
-    public void decryptUserBaedalHeaderValue(DecryptUserBaedalHeaderValueRequest request, StreamObserver<DecryptUserBaedalHeaderValueResponse> responseObserver) {
-        DecryptUserBaedalHeaderValueResponse decryptUserBaedalHeaderValueResponse = DecryptUserBaedalHeaderValueResponse.newBuilder()
-                .setDecryptedText(request.getEncryptedText())
-                .build();
-        responseObserver.onNext(decryptUserBaedalHeaderValueResponse);
-        responseObserver.onCompleted();
+    public void decryptUserBaedalHeaderValue(
+            DecryptUserBaedalHeaderValueRequest request,
+            StreamObserver<DecryptUserBaedalHeaderValueResponse> responseObserver) {
+        try {
+            String decryptedText = Cipher.decrypt(request.getEncryptedText(), AES_KEY);
+            DecryptUserBaedalHeaderValueResponse response =
+                    DecryptUserBaedalHeaderValueResponse.newBuilder().setDecryptedText(decryptedText).build();
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();
+        } catch (Exception e) {
+            responseObserver.onError(e);
+        }
     }
 }
