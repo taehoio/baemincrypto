@@ -1,0 +1,11 @@
+commonLabels:
+  app: baemincrypto
+
+resources:
+  - deployment.yaml
+  - service.yaml
+
+images:
+  - name: baemincrypto
+    newName: ghcr.io/taehoio/baemincrypto
+    newTag: $IMAGE_TAG
