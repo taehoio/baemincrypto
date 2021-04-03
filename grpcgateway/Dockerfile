@@ -16,5 +16,5 @@ RUN if [ "$test" = "true" ]; then make test ; fi
 
 FROM gcr.io/distroless/base
 
-COPY --from=build /go/bin /baemincrypto-grpcgateway
+COPY --from=build /go/bin /app
 ENTRYPOINT ["app/baemincrypto-grpcgateway"]
