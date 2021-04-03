@@ -83,3 +83,24 @@ jobs:
           push: true
           tags: |
             ghcr.io/taehoio/baemincrypto:${{ github.sha }}
+
+  deploy-staging:
+    name: Deploy to staging
+    runs-on: ubuntu-20.04
+    if: github.ref == 'refs/heads/main'
+    needs: [lint, unit, build]
+    steps:
+      - name: Create deployment
+        run: |
+          curl --silent --show-error --fail \
+            -X POST "https://api.github.com/repos/$GITHUB_REPOSITORY/deployments" \
+            -H "Authorization: token ${{ secrets.GH_ACCESS_TOKEN }}" \
+            -H "Content-Type: text/json; charset=utf-8" \
+            -d @- <<EOF
+          {
+            "ref": "main",
+            "environment": "staging",
+            "required_contexts": [],
+            "auto_merge": false
+          }
+          EOF
