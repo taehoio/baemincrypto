@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="output" path="bin/default"/>
+	<classpathentry output="bin/main" kind="src" path="src/main/java">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry output="bin/main" kind="src" path="build/generated/source/proto/main/java">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry output="bin/main" kind="src" path="build/generated/source/proto/main/grpc">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry output="bin/main" kind="src" path="src/main/resources">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry output="bin/test" kind="src" path="src/test/java">
+		<attributes>
+			<attribute name="gradle_scope" value="test"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry output="bin/test" kind="src" path="src/test/resources">
+		<attributes>
+			<attribute name="gradle_scope" value="test"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11/"/>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.linecorp.armeria/armeria-grpc/1.5.0/a75aa19704ed2ad344b3b26dbe4991692c343cff/armeria-grpc-1.5.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.linecorp.armeria/armeria-grpc/1.5.0/61c8849dd6761110d7340140dd2cebc433e1fae9/armeria-grpc-1.5.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.3.2/65dfd2c47380bf72ec62a5b8c4ceb78a4eda1a53/javax.annotation-api-1.3.2-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.3.2/934c04d3cfef185a8008e7bf34331b79730a9d43/javax.annotation-api-1.3.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-services/1.35.0/b036f684500ed318485d0ce25b5a294b86399951/grpc-services-1.35.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-services/1.35.0/e9d1fd7729b842cf5a376827ade7f12ad25e31fe/grpc-services-1.35.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-protobuf/1.35.0/46707bbb89d5a98ae639909b19ea6ed63daf74ff/grpc-protobuf-1.35.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-protobuf/1.35.0/6b527978b3d5f5ae16fbe7faa456c1a47d80de55/grpc-protobuf-1.35.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-core/1.35.0/2832dbe88e9d70d634e80ba50d4a5c0af6c9249a/grpc-core-1.35.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-core/1.35.0/24fae70e8958b900d6cc0cd316b723e4c48e7860/grpc-core-1.35.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-stub/1.35.0/c462a02f08d58cf4fd50dbfb6eb1983dd6ba0512/grpc-stub-1.35.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-stub/1.35.0/daa70fb26091a348bb6fa416e2b18dd1378eb1c3/grpc-stub-1.35.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-protobuf-lite/1.35.0/349d2281fbb951b2f84fa247586a550d46ad02e6/grpc-protobuf-lite-1.35.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-protobuf-lite/1.35.0/c98b691404547ada8694f1cd4d9de0fd4f64815a/grpc-protobuf-lite-1.35.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-api/1.35.0/31c6087b3e0203e264decd2a505225be7db05b7f/grpc-api-1.35.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-api/1.35.0/a237633b6ccff56e6f69208dba16e3c06f8ab611/grpc-api-1.35.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/b19b5927c2c25b6c70f093767041e641ae0b1b35/jsr305-3.0.2-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.linecorp.armeria/armeria/1.5.0/cba2894fc95c7d733375fbc4e99eb861b274ea47/armeria-1.5.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.linecorp.armeria/armeria/1.5.0/bb7002fde206c8069ef320053291cbb93004d3e4/armeria-1.5.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.projectreactor/reactor-core/3.3.8.RELEASE/365aeac97cf7f2765d0e707cf924dea0095f19ad/reactor-core-3.3.8.RELEASE-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.projectreactor/reactor-core/3.3.8.RELEASE/e6b2e8dc1f6548ae216b2ecdee0c0a32176317a/reactor-core-3.3.8.RELEASE.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.30/71a1fdefa224da50f1db6306ce609981e20186c9/slf4j-api-1.7.30-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.30/b5a4b6d16ab13e34a88fae84c35cd5d68cac922c/slf4j-api-1.7.30.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.curioswitch.curiostack/protobuf-jackson/1.2.0/c54b4cb57fa30d217a323b2449c49587033931c5/protobuf-jackson-1.2.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.curioswitch.curiostack/protobuf-jackson/1.2.0/832d264eda9b6d9358bf6d4dd60168609c9dee6e/protobuf-jackson-1.2.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.12.1/3871bc14a6eada48e906117fe6330c8e3958d8ad/jackson-databind-2.12.1-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.12.1/8a97e00e429c42f74757b0a8cd1d39dddd41524f/jackson-databind-2.12.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.12.1/4f134564ef9bb2cdadfb48b0e7df9d4a5baa7495/jackson-annotations-2.12.1-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.12.1/aa079f822ddce5548018286d19ccb15c2fc202d7/jackson-annotations-2.12.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.12.1/9a7de2c68e9e884cba7df9671e77042d925f9436/jackson-core-2.12.1-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.12.1/7c5493930e439be6fcec80a9afd6516b8e5e8760/jackson-core-2.12.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.micrometer/micrometer-core/1.5.3/853a7444c1071eb4412e62ba2775e93b4237fa/micrometer-core-1.5.3-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.micrometer/micrometer-core/1.5.3/3a2238456f927aacdc4633554f838b81a89c132a/micrometer-core-1.5.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http2/4.1.51.Final/5931d4dae4c1a2142ec0063b513ed7299db97950/netty-codec-http2-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http2/4.1.51.Final/1d9d8d24fad44ae249b941e9ef61169b5b457d39/netty-codec-http2-4.1.51.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-haproxy/4.1.51.Final/c1d5b2eb59dff09f26b0da20e269e9158b3bb706/netty-codec-haproxy-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-haproxy/4.1.51.Final/5fe07598bd37a0e9a3737eeae6f31163d5fc6e02/netty-codec-haproxy-4.1.51.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver-dns/4.1.51.Final/ce62c39542c96175d54242b0060c701578a9090a/netty-resolver-dns-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver-dns/4.1.51.Final/7b5273d72a198d4ce6718dd84ae67ef50943fc09/netty-resolver-dns-4.1.51.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.51.Final/975f52630587a05e07c80d65293b43d87b924c94/netty-codec-http-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.51.Final/67430433232450a13c0280159b087575a5e0897c/netty-codec-http-4.1.51.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.51.Final/69993e4450bc0db3879a749d5467b8a157776982/netty-handler-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.51.Final/b4b1db4b71e4e082587da3a5684df101dab2dc3a/netty-handler-4.1.51.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-dns/4.1.51.Final/9ab1abb456e50372630af70af7bb012f72d068bf/netty-codec-dns-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-dns/4.1.51.Final/127fba3117deced1cb20f8f58b0028f354b9fc25/netty-codec-dns-4.1.51.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.51.Final/c26a22c12f1cd047781a406e82b998de5c799639/netty-codec-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.51.Final/69b830d381b64e988632561d823b53f783efe9c5/netty-codec-4.1.51.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.51.Final/451fd73526ca4679ea650c2ac38d60e2434be7d1/netty-transport-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.51.Final/dbbe2d21879ceb82e7b44cd505aba83b752001a4/netty-transport-4.1.51.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.3/e6ffdff8c438d959376c91d94b319457354a84c5/reactive-streams-1.0.3-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.3/d9fb7a7926ffa635b3dcaa5049fb2bfa25b3e7d0/reactive-streams-1.0.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.14.0/23eac2614177967456ada0873e64634fd064cee8/protobuf-java-3.14.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.14.0/bb6430f70647fc349fffd1690ddb889dc3ea6699/protobuf-java-3.14.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.hdrhistogram/HdrHistogram/2.1.12/d8cf7bad79ef75fd41395c5f464ea38777463d95/HdrHistogram-2.1.12-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.hdrhistogram/HdrHistogram/2.1.12/6eb7552156e0d517ae80cc2247be1427c8d90452/HdrHistogram-2.1.12.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.51.Final/23ddb7fc5282833c854a89ec801e76da6d226c30/netty-buffer-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.51.Final/2f4efc2ed376b46f4eb27f9405fa5a32a3695177/netty-buffer-4.1.51.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.51.Final/80361cdc1f4f9482fc207b71a00c9dd665c735c6/netty-resolver-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.51.Final/47c0b7a0e0faf059d5b8c58b64d78b8f2cfc0463/netty-resolver-4.1.51.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.51.Final/4febb94ae446e554237b721ffdcb5e2bed478e8f/netty-common-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.51.Final/ef64ad6fe8a8bc380a96f6d67e9fc442689dd7e1/netty-common-4.1.51.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.api.grpc/proto-google-common-protos/2.0.1/7f662d373f057cc23e97edbf082b883e7eee4314/proto-google-common-protos-2.0.1-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.api.grpc/proto-google-common-protos/2.0.1/20827628ea2b9f69ae22987b2aedb0050e9c470d/proto-google-common-protos-2.0.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/30.0-android/313ef0e0f713e0a923d89d214bd1fa9e93c45985/guava-30.0-android-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/30.0-android/12aff8dd7211f090c35e4c51a4256f1d5569c2e7/guava-30.0-android.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.4.0/3921a2ff59cbc7ed711b7925109d1f54ec3b8a70/error_prone_annotations-2.4.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.4.0/32ecccc595e4e4d813a80ee9e3ab5813d65874eb/error_prone_annotations-2.4.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-context/1.35.0/57c34fe0d81825b667e96c69f9fdbf9a2994f3d2/grpc-context-1.35.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-context/1.35.0/e1a28ecceee6b6c226a194bde5357b8eeb7b54e0/grpc-context-1.35.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1d064e61aad6c51cc77f9b59dc2cccc78e792f5a/failureaccess-1.0.1-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-compat-qual/2.5.5/54d4253d4d8723096a95b7551bd5639e7e2affba/checker-compat-qual-2.5.5-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-compat-qual/2.5.5/435dc33e3019c9f019e15f01aa111de9d6b2b79c/checker-compat-qual-2.5.5.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.3/d26c56180205cbb50447c3eca98ecb617cf9f58b/j2objc-annotations-1.3-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.3/ba035118bc8bac37d7eff77700720999acd9986d/j2objc-annotations-1.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.linecorp.armeria/armeria-grpc-protocol/1.5.0/a10bcbdeb09b5f5eb649940773d56d04d5f83fa2/armeria-grpc-protocol-1.5.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.linecorp.armeria/armeria-grpc-protocol/1.5.0/c3c00e597584b0cfe65f639a735c01a9133d48bb/armeria-grpc-protocol-1.5.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java-util/3.12.0/7c773ad043d8eb4c9713e7c141a6a09e9abebdf2/protobuf-java-util-3.12.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java-util/3.12.0/d7cbfbf702e9026be96edb9c85b183333adb0683/protobuf-java-util-3.12.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.30/5d6530a871f57605c828f2d330ea8f9817837a6f/slf4j-simple-1.7.30-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.30/e606eac955f55ecf1d8edcccba04eb8ac98088dd/slf4j-simple-1.7.30.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver-dns-native-macos/4.1.51.Final/454bc302bae90428109c84aec8c4fd19f6ebb36f/netty-resolver-dns-native-macos-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver-dns-native-macos/4.1.51.Final/5eca550b7423fa6d8f4e79025d1fbb6bfefb7cf8/netty-resolver-dns-native-macos-4.1.51.Final-osx-x86_64.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.51.Final/bfd5f1ae77cec909e6a92fe32db8b8e354d4232f/netty-transport-native-epoll-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.51.Final/a3fc714d4327b8ed8d471b0f045593887f72188d/netty-transport-native-epoll-4.1.51.Final-linux-x86_64.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.51.Final/37bc3a830e4856366453dd7a6edd3a2b381f9eb0/netty-transport-native-unix-common-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.51.Final/97ff4cd9db77ad66bd42718455711bf5a91a11c2/netty-transport-native-unix-common-4.1.51.Final-linux-x86_64.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.51.Final/37bc3a830e4856366453dd7a6edd3a2b381f9eb0/netty-transport-native-unix-common-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.51.Final/170f987d8dbba498734c0d15eb88b16cd38eebdf/netty-transport-native-unix-common-4.1.51.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler-proxy/4.1.51.Final/fb465b6f52f7b13e2871c1eab521377ab4f1bf9c/netty-handler-proxy-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler-proxy/4.1.51.Final/4b4f203d08e210903330778746397e4676b0db1d/netty-handler-proxy-4.1.51.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-socks/4.1.51.Final/604cdcdf2049d15e8a487f7077c98d7081b3263/netty-codec-socks-4.1.51.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-socks/4.1.51.Final/27e957c9bf84d413d224a7f4b424462fd6ee1f37/netty-codec-socks-4.1.51.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-tcnative-boringssl-static/2.0.36.Final/4e41455983fa123783fdf8735864a33ea16688a5/netty-tcnative-boringssl-static-2.0.36.Final-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.netty/netty-tcnative-boringssl-static/2.0.36.Final/f35f05118d846dfe30a4e7f757a47601ee9d0cea/netty-tcnative-boringssl-static-2.0.36.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.latencyutils/LatencyUtils/2.0.3/fbc38259e2077a428984637d811dac542a6a913e/LatencyUtils-2.0.3-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.latencyutils/LatencyUtils/2.0.3/769c0b82cb2421c8256300e907298a9410a2a3d3/LatencyUtils-2.0.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.6/1b9adea7bbe0b251818f42fde0bd2988d7e5f20a/gson-2.8.6-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.6/9180733b7df8542621dc12e21e87557e8c99b8cb/gson-2.8.6.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.android/annotations/4.1.1.4/deb22daeb37bdcbc14230aeaeddce38320d6d0f9/annotations-4.1.1.4-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/com.google.android/annotations/4.1.1.4/a1678ba907bf92691d879fef34e1a187038f9259/annotations-4.1.1.4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.perfmark/perfmark-api/0.23.0/d4f6ec422fd2f00fffba00aa7167f1ed654cf1f0/perfmark-api-0.23.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/io.perfmark/perfmark-api/0.23.0/b813b7539fae6550541da8caafd6add86d4e22f/perfmark-api-0.23.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.19/6230414d024899ce5552c9c30ce49163e1906dbd/animal-sniffer-annotations-1.19-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.19/1536e1a8fd552dc05f12b5f0827fbb2ee3d5a89b/animal-sniffer-annotations-1.19.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/1.3.5/1ad35f11d17abb52426bfe15ea7b4c583795012/jakarta.annotation-api-1.3.5-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/1.3.5/59eb84ee0d616332ff44aba065f3888cf002cd2d/jakarta.annotation-api-1.3.5.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.10.19/81af0dc225c651e1e15b2b53de8d5493e40df834/byte-buddy-1.10.19-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.10.19/7a8cf46cd99db76f02b335d53aad222d42bc412d/byte-buddy-1.10.19.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/junit/junit/4.13/d10a9c3acc6c07a5700e37697b5a6b4dcfb8abf9/junit-4.13-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/junit/junit/4.13/e49ccba652b735c93bd6e6f59760d8254cf597dd/junit-4.13.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.16.1/f9dc10a74d690a0bbe2a0c07a4fa33b13db867bb/assertj-core-3.16.1-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.16.1/6e772120aff69ca3d1583b3d1b36b7529de43ba1/assertj-core-3.16.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.6.2/bada08402ff53506b1446bc8b3caf5a2aec6c7d1/junit-platform-commons-1.6.2-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.6.2/7644a14b329e76b5fe487628b50fb5eab6ba7d26/junit-platform-commons-1.6.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.6.2/f09c69685e20753eaf05577f5da1f9a220783def/junit-jupiter-params-5.6.2-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.6.2/f2a64a42cf73077062c2386db0598062b7480d91/junit-jupiter-params-5.6.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.6.2/ce1129e07053701f7458120b12229aedb05bcd4a/junit-jupiter-api-5.6.2-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.6.2/c9ba885abfe975cda123bf6f8f0a69a1b46956d0/junit-jupiter-api-5.6.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/net.javacrumbs.json-unit/json-unit-fluent/2.18.1/e1cb5844d7688e01898724314a95e8835d759c6/json-unit-fluent-2.18.1-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/net.javacrumbs.json-unit/json-unit-fluent/2.18.1/f17be843cfc3e8f6c4cb69a6c7bff0d1e351b595/json-unit-fluent-2.18.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.awaitility/awaitility/4.0.3/fe8a9a557adc00bc3fbf1e5751ab7a73e8b43e48/awaitility-4.0.3-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.awaitility/awaitility/4.0.3/144a5f4c85c5113e1f63139b5bdee6336511ee88/awaitility-4.0.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/net.javacrumbs.json-unit/json-unit-core/2.18.1/aa3a4d38c5e9d2a2c1a2c03c35ee31977fe734a5/json-unit-core-2.18.1-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/net.javacrumbs.json-unit/json-unit-core/2.18.1/5708428c4da039100005e3cc68cab88c31e92cb8/json-unit-core-2.18.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/2.1/2465f3befb94b110ef573331d7b4a3028d16ffa2/hamcrest-core-2.1-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/2.1/70dd49dea4507315b1fa3bc1aa59b1442d55957a/hamcrest-core-2.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.0/f3c15fe970af864390c8d0634c9f16aca1b064a8/apiguardian-api-1.1.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.0/fc9dff4bb36d627bdc553de77e1f17efd790876c/apiguardian-api-1.1.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.2.0/41d55b3c2254de9837b4ec8923cbd371b8a7eab5/opentest4j-1.2.0-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.2.0/28c11eb91f9b6d8e200631d46e20a7f407f2a046/opentest4j-1.2.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest/2.1/aa6763235632b77fd9245c850b6a7dc09382314c/hamcrest-2.1-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest/2.1/9420ba32c29217b54eebd26ff7f9234d31c3fbb2/hamcrest-2.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.6.2/2116c399709549a3094a8f2bd96bb3f94b98a341/junit-jupiter-engine-5.6.2-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.6.2/c0833bd6de29dd77f8d071025b97b8b434308cd3/junit-jupiter-engine-5.6.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.6.2/d9efa09350f724e7e7defa0e74c4f4573e276fe1/junit-platform-launcher-1.6.2-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.6.2/d866de2950859ca1c7996351d7b3d97428083cd0/junit-platform-launcher-1.6.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.6.2/9240cb4f3ee7693f8f18f4140acc7f8c83336e30/junit-platform-engine-1.6.2-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.6.2/1752cad2579e20c2b224602fe846fc660fb35805/junit-platform-engine-1.6.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.junit.vintage/junit-vintage-engine/5.6.2/c951fc975f1e3181b9d549e295e819bdae09b83b/junit-vintage-engine-5.6.2-sources.jar" kind="lib" path="/Users/xissysnd/.gradle/caches/modules-2/files-2.1/org.junit.vintage/junit-vintage-engine/5.6.2/f26e3b80aaeb8319bce9eec4fb9d8379bb4e675b/junit-vintage-engine-5.6.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+</classpath>
