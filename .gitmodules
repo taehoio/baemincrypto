@@ -1,4 +1,4 @@
 [submodule "idl"]
 	path = idl
-  url = git@github.com:taehoio/idl.git
-  branch = main
+	url = git@github.com:taehoio/idl.git
+	branch = main
