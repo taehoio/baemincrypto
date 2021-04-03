@@ -26,6 +26,16 @@ spec:
           ports:
             - containerPort: 8080
               protocol: TCP
+        - name: baemincrypto-grpcgateway
+          image: baemincrypto-grpcgateway
+          resources:
+            limits:
+              memory: 128Mi
+              cpu: "0.5"
+            requests:
+              memory: 64Mi
+              cpu: "0.2"
+          ports:
             - containerPort: 18080
               protocol: TCP
       imagePullSecrets:

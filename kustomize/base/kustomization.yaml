@@ -9,3 +9,6 @@ images:
   - name: baemincrypto
     newName: ghcr.io/taehoio/baemincrypto
     newTag: $IMAGE_TAG
+  - name: baemincrypto-grpcgateway
+    newName: ghcr.io/taehoio/baemincrypto-grpcgateway
+    newTag: $IMAGE_TAG
