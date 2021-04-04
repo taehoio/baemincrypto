@@ -16,6 +16,9 @@ spec:
       containers:
         - name: baemincrypto
           image: baemincrypto
+          ports:
+            - containerPort: 8080
+              protocol: TCP
           resources:
             limits:
               memory: 512Mi
@@ -23,11 +26,11 @@ spec:
             requests:
               memory: 256Mi
               cpu: "0.2"
-          ports:
-            - containerPort: 8080
-              protocol: TCP
         - name: baemincrypto-grpcgateway
           image: baemincrypto-grpcgateway
+          ports:
+            - containerPort: 18080
+              protocol: TCP
           resources:
             limits:
               memory: 128Mi
@@ -35,8 +38,26 @@ spec:
             requests:
               memory: 64Mi
               cpu: "0.2"
-          ports:
-            - containerPort: 18080
-              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: "/baemincrypto/v1/health"
+              port: 18080
+              scheme: HTTP
+            initialDelaySeconds: 5
+            timeoutSeconds: 2
+            periodSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: "/baemincrypto/v1/health"
+              port: 18080
+              scheme: HTTP
+            initialDelaySeconds: 10
+            timeoutSeconds: 1
+            periodSeconds: 3
+            successThreshold: 1
+            failureThreshold: 2
+      terminationGracePeriodSeconds: 30
       imagePullSecrets:
         - name: ghcr
