@@ -38,5 +38,6 @@ spec:
           ports:
             - containerPort: 18080
               protocol: TCP
+      terminationGracePeriodSeconds: 30
       imagePullSecrets:
         - name: ghcr

@@ -50,6 +50,7 @@ public final class Main {
                 .service("prefix:/prefix", grpcService)
                 .accessLogger(logger)
                 .accessLogWriter(AccessLogWriter.combined(), true)
+                .gracefulShutdownTimeoutMillis(30000, 30000)
                 .build();
     }
 }
