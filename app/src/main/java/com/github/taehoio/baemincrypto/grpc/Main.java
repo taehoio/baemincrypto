@@ -4,6 +4,7 @@ import com.linecorp.armeria.common.grpc.GrpcSerializationFormats;
 import com.linecorp.armeria.server.HttpServiceWithRoutes;
 import com.linecorp.armeria.server.Server;
 import com.linecorp.armeria.server.grpc.GrpcService;
+import com.linecorp.armeria.server.logging.AccessLogWriter;
 import io.grpc.protobuf.services.ProtoReflectionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,6 +48,8 @@ public final class Main {
                 .tlsSelfSigned()
                 .service(grpcService)
                 .service("prefix:/prefix", grpcService)
+                .accessLogger(logger)
+                .accessLogWriter(AccessLogWriter.combined(), true)
                 .build();
     }
 }
