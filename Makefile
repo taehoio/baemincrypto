@@ -16,5 +16,5 @@ build-grpcgateway:
 	cd grpcgateway && \
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -ldflags="-w -s" -o bin/baemincrypto-grpcgateway.linux.amd64 cmd/main.go && \
 	CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -a -installsuffix cgo -ldflags="-w -s" -o bin/baemincrypto-grpcgateway.linux.arm64 cmd/main.go && \
-	CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags="-w -s" -o bin/build-grpcgateway cmd/main.go && \
+	CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags="-w -s" -o bin/baemincrypto-grpcgateway cmd/main.go && \
 	cd ..
