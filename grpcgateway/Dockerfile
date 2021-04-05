@@ -1,20 +1,19 @@
-FROM golang:1.16.2 as build
+FROM golang:1.16.3 as build
 
-WORKDIR /baemincrypto-grpcgateway
-COPY . .
+ARG TARGETPLATFORM
+ARG BUILDPLATFORM
 
-WORKDIR /baemincrypto-grpcgateway/cmd
-ARG GH_ACCESS_TOKEN
-RUN git config --global url."https://${GH_ACCESS_TOKEN}@github.com/".insteadOf "https://github.com/"
-RUN CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags="-w -s" -o /go/bin/baemincrypto-grpcgateway
+WORKDIR /baemincrypto-grpcgateway/bin
+COPY ./bin ./
 
-WORKDIR /baemincrypto-grpcgateway
-ARG test
-RUN if [ "$test" = "true" ]; then make lint ; fi
-RUN if [ "$test" = "true" ]; then make test ; fi
+RUN if [ "$BUILDPLATFORM" = "linux/amd64" ]; then mv baemincrypto-grpcgateway.linux.amd64 baemincrypto-grpcgateway ; fi
+RUN if [ "$BUILDPLATFORM" = "linux/arm64" ]; then mv baemincrypto-grpcgateway.linux.arm64 baemincrypto-grpcgateway ; fi
 
 
-FROM gcr.io/distroless/base
+FROM --platform=$BUILDPLATFORM gcr.io/distroless/base
 
-COPY --from=build /go/bin /app
+ARG TARGETPLATFORM
+ARG BUILDPLATFORM
+
+COPY --from=build /baemincrypto-grpcgateway/bin/baemincrypto-grpcgateway /app/baemincrypto-grpcgateway
 ENTRYPOINT ["app/baemincrypto-grpcgateway"]
