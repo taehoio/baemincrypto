@@ -3,7 +3,7 @@ FROM golang:1.16.3 as build
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 
-WORKDIR /baemincrypto-grpcwateway/bin
+WORKDIR /baemincrypto-grpcgateway/bin
 COPY ./bin ./
 
 RUN if [ "$BUILDPLATFORM" = "linux/amd64" ]; then mv baemincrypto-grpcgateway.linux.amd64 baemincrypto-grpcgateway ; fi
