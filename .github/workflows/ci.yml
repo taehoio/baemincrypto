@@ -106,14 +106,27 @@ jobs:
           username: ${{ secrets.GH_USERNAME }}
           password: ${{ secrets.GH_ACCESS_TOKEN }}
 
+      - name: Setup
+        run: |
+          git config --global url."https://${{ secrets.GH_ACCESS_TOKEN }}@github.com/".insteadOf "https://github.com/"
+
+      - uses: actions/cache@v2
+        with:
+          path: ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
+
+      - name: Build golang executables
+        run: |
+          make build-grpcgateway
+
       - name: Build and push
         uses: docker/build-push-action@v2
         id: docker_build
         with:
           context: grpcgateway
           platforms: linux/amd64,linux/arm64
-          build-args: |
-            GH_ACCESS_TOKEN=${{ secrets.GH_ACCESS_TOKEN }}
           push: true
           tags: |
             ghcr.io/taehoio/baemincrypto-grpcgateway:${{ github.sha }}
