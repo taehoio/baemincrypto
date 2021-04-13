@@ -39,30 +39,6 @@ sourceSets {
     }
 }
 
-protobuf {
-    protoc {
-        if (osdetector.os == 'osx') {
-            artifact = 'com.google.protobuf:protoc:3.14.0:osx-x86_64'
-        } else {
-            artifact = 'com.google.protobuf:protoc:3.14.0'
-        }
-    }
-    plugins {
-        grpc {
-            if (osdetector.os == 'osx') {
-                artifact = 'io.grpc:protoc-gen-grpc-java:1.35.1:osx-x86_64'
-            } else {
-                artifact = 'io.grpc:protoc-gen-grpc-java:1.35.1'
-            }
-        }
-    }
-    generateProtoTasks {
-        ofSourceSet('main')*.plugins {
-            grpc {}
-        }
-    }
-}
-
 dependencies {
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
     testImplementation 'junit:junit:4.13'
@@ -91,30 +67,27 @@ dependencies {
     implementation 'net.logstash.logback:logstash-logback-encoder:5.2'
 }
 
-tasks.withType(JavaCompile) {
-    sourceCompatibility = '11'
-    targetCompatibility = '11'
-    options.encoding = 'UTF-8'
-    options.debug = true
-    options.compilerArgs += '-parameters'
-}
-
-tasks.withType(Test) {
-    useJUnitPlatform()
-}
-
-def mainClassName = 'com.github.taehoio.baemincrypto.grpc.Main'
-
-application {
-    mainClass.set(mainClassName)
-}
-
-jar {
-    manifest {
-        attributes 'Main-Class': mainClassName
+protobuf {
+    protoc {
+        if (osdetector.os == 'osx') {
+            artifact = 'com.google.protobuf:protoc:3.14.0:osx-x86_64'
+        } else {
+            artifact = 'com.google.protobuf:protoc:3.14.0'
+        }
     }
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    plugins {
+        grpc {
+            if (osdetector.os == 'osx') {
+                artifact = 'io.grpc:protoc-gen-grpc-java:1.35.1:osx-x86_64'
+            } else {
+                artifact = 'io.grpc:protoc-gen-grpc-java:1.35.1'
+            }
+        }
+    }
+    generateProtoTasks {
+        ofSourceSet('main')*.plugins {
+            grpc {}
+        }
     }
 }
 
@@ -130,4 +103,42 @@ spotless {
         indentWithTabs(2)
         indentWithSpaces(4)
     }
+}
+
+spotlessJava.dependsOn('extractIncludeProto');
+spotlessJava.dependsOn('extractProto');
+spotlessJava.dependsOn('generateProto');
+spotlessJava.dependsOn('extractTestProto');
+
+processResources.dependsOn('spotlessJava')
+
+tasks.withType(JavaCompile) {
+    dependsOn('spotlessJava')
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+    options.encoding = 'UTF-8'
+    options.debug = true
+    options.compilerArgs += '-parameters'
+}
+
+tasks.withType(Test) {
+    dependsOn('spotlessJava')
+    useJUnitPlatform()
+}
+
+def mainClassName = 'com.github.taehoio.baemincrypto.grpc.Main'
+
+application {
+    mainClass.set(mainClassName)
+}
+
+jar {
+    dependsOn('spotlessJava')
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
 }
