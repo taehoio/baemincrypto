@@ -77,6 +77,17 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@master
+        with:
+          project_id: taehoio-global
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+
+      - name: Configure gcloud docker
+        run: |
+          gcloud auth configure-docker asia-northeast1-docker.pkg.dev
+
       - name: Setup JDK
         uses: actions/setup-java@v1
         with:
@@ -94,18 +105,14 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build -x test
 
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ secrets.GH_USERNAME }}
-          password: ${{ secrets.GH_ACCESS_TOKEN }}
+      - name: Build golang executables
+        run: |
+          make build-grpcgateway
 
       - name: Build and push
         uses: docker/build-push-action@v2
         id: docker_build
         with:
-          context: app
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
