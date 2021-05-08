@@ -90,7 +90,7 @@ func main() {
 	log := logrus.StandardLogger()
 
 	grpcPort := getEnv("SERVICE_GRPC_PORT", "8080")
-	grpcHost := "localhost:" + grpcPort
+	grpcHost := "127.0.0.1:" + grpcPort
 	httpPort := getEnv("SERVICE_HTTP_PORT", "18080")
 
 	log.WithField("grpcPort", grpcPort).WithField("httpPort", httpPort).Info("starting baemincrypto HTTP server")
