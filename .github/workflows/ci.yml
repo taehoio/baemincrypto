@@ -107,7 +107,7 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: Build with Gradle
-        run: ./gradlew dockerfileNative -x test
+        run: ./gradlew build -x test
 
       - name: Build and push
         uses: docker/build-push-action@v2
