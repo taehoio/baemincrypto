@@ -24,4 +24,4 @@ VOLUME /tmp
 
 ADD ./app/build/libs/*.jar app.jar
 
-ENTRYPOINT ["sh", "-c", "java -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=$ENV -server -Xms3G -Xmx3G -XX:+UseG1GC -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+ScavengeBeforeFullGC -Xlog:gc*:gc.log -jar app.jar & /app/baemincrypto-grpcgateway"]
+ENTRYPOINT ["sh", "-c", "java -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=$ENV -server -Xms512G -Xmx512G -XX:+UseG1GC -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+ScavengeBeforeFullGC -Xlog:gc*:gc.log -jar app.jar & /app/baemincrypto-grpcgateway"]
