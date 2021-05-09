@@ -1,11 +1,80 @@
-buildscript {
-    repositories {
-        mavenCentral()
+plugins {
+    id("com.github.johnrengelman.shadow") version "7.0.0"
+    id("io.micronaut.application") version "1.5.0"
+    id("com.google.protobuf") version "0.8.15"
+    id("com.diffplug.spotless") version '5.12.0'
+}
+
+version = "0.1"
+group = "com.github.taehoio.baemincrypto"
+
+repositories {
+    mavenCentral()
+}
+
+micronaut {
+    testRuntime("junit5")
+    processing {
+        incremental(true)
+        annotations("com.github.taehoio.baemincrypto.*")
     }
 }
 
-allprojects {
-    repositories {
-        mavenCentral()
+dependencies {
+    implementation("io.micronaut:micronaut-runtime")
+    implementation("io.micronaut.grpc:micronaut-grpc-runtime")
+    implementation("javax.annotation:javax.annotation-api")
+    runtimeOnly("ch.qos.logback:logback-classic")
+    implementation("io.micronaut:micronaut-validation")
+    testImplementation("io.micronaut:micronaut-http-client")
+    testImplementation("org.assertj:assertj-core:3.16.1")
+}
+
+application {
+    mainClass.set("com.github.taehoio.baemincrypto.Application")
+}
+
+shadowJar {
+    mergeServiceFiles()
+}
+
+java {
+    sourceCompatibility = JavaVersion.toVersion("11")
+    targetCompatibility = JavaVersion.toVersion("11")
+}
+
+sourceSets {
+    main {
+        proto {
+            srcDir("src/main/idl")
+        }
+        java {
+            srcDirs("build/generated/source/proto/main/grpc")
+            srcDirs("build/generated/source/proto/main/java")
+        }
+    }
+}
+
+protobuf {
+    protoc { artifact = "com.google.protobuf:protoc:3.14.0" }
+    plugins {
+        grpc { artifact = "io.grpc:protoc-gen-grpc-java:1.35.1" }
+    }
+    generateProtoTasks {
+        all()*.plugins { grpc {} }
+    }
+}
+
+spotless {
+    java {
+        target project.fileTree(project.rootDir) {
+            include '**/*.java'
+            exclude '**/generated/**/*.*'
+        }
+        googleJavaFormat()
+        // to have 4 spaces indent with google java style guide.
+        // https://github.com/diffplug/spotless/issues/317
+        indentWithTabs(2)
+        indentWithSpaces(4)
     }
 }

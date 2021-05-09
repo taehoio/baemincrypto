@@ -1,13 +1,18 @@
-package com.github.taehoio.baemincrypto.grpc;
+package com.github.taehoio.baemincrypto;
 
-import com.github.taehoio.baemincrypto.cipher.Cipher;
 import com.github.taehoio.idl.services.baemincrypto.v1.*;
 import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
+import javax.inject.Singleton;
 
-public class BaemincryptoServiceImpl extends BaemincryptoServiceGrpc.BaemincryptoServiceImplBase {
+@Singleton
+public class BaemincryptoEndpoint extends BaemincryptoServiceGrpc.BaemincryptoServiceImplBase {
 
-    private static final String AES_KEY = "sbfighting";
+    private final BaemincryptoService baemincryptoService;
+
+    public BaemincryptoEndpoint(BaemincryptoService baemincryptoService) {
+        this.baemincryptoService = baemincryptoService;
+    }
 
     @Override
     public void healthCheck(
@@ -22,7 +27,8 @@ public class BaemincryptoServiceImpl extends BaemincryptoServiceGrpc.Baemincrypt
             EncryptUserBaedalHeaderValueRequest request,
             StreamObserver<EncryptUserBaedalHeaderValueResponse> responseObserver) {
         try {
-            String encryptedText = Cipher.encrypt(request.getInputText(), AES_KEY);
+            final String encryptedText =
+                    baemincryptoService.encryptUserBaedalHeaderValue(request.getInputText());
             EncryptUserBaedalHeaderValueResponse response =
                     EncryptUserBaedalHeaderValueResponse.newBuilder().setEncryptedText(encryptedText).build();
             responseObserver.onNext(response);
@@ -38,13 +44,15 @@ public class BaemincryptoServiceImpl extends BaemincryptoServiceGrpc.Baemincrypt
             DecryptUserBaedalHeaderValueRequest request,
             StreamObserver<DecryptUserBaedalHeaderValueResponse> responseObserver) {
         try {
-            String decryptedText = Cipher.decrypt(request.getEncryptedText(), AES_KEY);
+            final String decryptedText =
+                    baemincryptoService.decryptUserBaedalHeaderValue(request.getEncryptedText());
             DecryptUserBaedalHeaderValueResponse response =
                     DecryptUserBaedalHeaderValueResponse.newBuilder().setDecryptedText(decryptedText).build();
             responseObserver.onNext(response);
             responseObserver.onCompleted();
         } catch (Exception e) {
-            responseObserver.onError(e);
+            responseObserver.onError(
+                    Status.INTERNAL.withCause(e).withDescription(e.getMessage()).asException());
         }
     }
 }
