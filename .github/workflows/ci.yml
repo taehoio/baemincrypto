@@ -114,7 +114,7 @@ jobs:
         id: docker_build
         with:
           context: ./build
-          file: ./docker/DockerfileNative
+          file: ./build/docker/DockerfileNative
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
