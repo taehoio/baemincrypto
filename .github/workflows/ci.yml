@@ -117,4 +117,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            asia-northeast1-docker.pkg.dev/taehoio-global/docker-registry/baemincryptogrpc:${{ github.sha }}
+            asia-northeast1-docker.pkg.dev/taehoio-global/docker-registry/baemincrypto:${{ github.sha }}
