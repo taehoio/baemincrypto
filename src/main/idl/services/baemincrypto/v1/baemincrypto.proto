@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package services.baemincrypto.v1;
 
-option go_package = "github.com/taehoio/idl/gen/go/services/baemincryptov1";
+option go_package = "github.com/taehoio/idl/gen/go/services/baemincrypto/v1;baemincryptov1";
 option java_multiple_files = true;
 option java_outer_classname = "BaemincryptoProto";
 option java_package = "com.github.taehoio.idl.services.baemincrypto.v1";
