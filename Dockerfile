@@ -1,4 +1,4 @@
-FROM ghcr.io/graalvm/graalvm-ce:java11-21.1.0 AS graalvm
+FROM ghcr.io/graalvm/graalvm-ce:ol8-java17-22.1.0 AS graalvm
 RUN gu install native-image
 WORKDIR /home/app
 COPY build/layers/libs /home/app/libs
